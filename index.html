@@ -1,50 +1,69 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Montreal Condo For Sale</title>
-  <style>
-    body {
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>
+   Montreal Condo For Sale
+  </title>
+<style>
+   body {
       font-family: Arial, sans-serif;
       margin: 0;
       background-color: #f8f9fa;
       color: #333;
     }
     header {
-      background-image: url('header.jpg');
-      background-size: cover;
-      background-position: center;
+      background-color: #d8d8d8;
+      background-image: 
+        url('header.jpg'),
+        radial-gradient(circle at 2px 2px, #c0c0c0 2px, transparent 2px);
+      background-size: contain, 18px 18px;
+      background-repeat: no-repeat, repeat;
+      background-position: center, top left;
       height: 60vh;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-end;
       color: white;
       text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+      padding: 0 2rem;
+      box-sizing: border-box;
     }
     header h1 {
       font-size: 3rem;
-      background-color: rgba(0,0,0,0.5);
-      padding: 1rem 2rem;
+      background-color: rgba(0,0,0,0.75);
+      padding: 1.2rem 2.5rem;
       border-radius: 10px;
+      text-align: center;
+      margin-bottom: 20px;
     }
     .container {
-      display: flex;
-      flex-wrap: wrap;
       max-width: 1000px;
       margin: 2rem auto;
       padding: 0 1rem;
+    }
+    .full-width-text {
+      background-color: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+    .pair {
+      display: flex;
+      flex-wrap: wrap;
       gap: 2rem;
+      margin-bottom: 2rem;
     }
     .image-placeholder {
       flex: 1 1 45%;
-      background-color: #ddd;
-      height: 300px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 1.2rem;
-      color: #555;
+    }
+    .image-placeholder img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
     }
     .text-placeholder {
       flex: 1 1 45%;
@@ -53,21 +72,278 @@
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
+    .carousel {
+      position: relative;
+      width: 100%;
+    }
+    .carousel-controls {
+      position: absolute;
+      top: 45%;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 10px;
+    }
+    .carousel-controls button {
+      background-color: rgba(0,0,0,0.5);
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  
+.carousel-counter {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  font-size: 0.9rem;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+
+
+#neighborhood-scroll {
+  max-height: 380px;
+  overflow-y: auto;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
   </style>
 </head>
 <body>
-
 <header>
-  <h1>Montreal Condo For Sale</h1>
+<h1>
+    Montreal Condo For Sale
+   </h1>
 </header>
+<div class="container"><div class="full-width-text">
+<h2>
+     Overview
+    </h2>
+<p>I am selling my condo located in the south shore of Montreal, specifically LaSalle Quebec. The property is on the highest (10th) floor of the building with beautiful views of the area. It is a one bedroom, one bathroom, 500 square foot (approximately) corner unit. Price is $355,000.</p><p>I am the first and only owner of this property as well as the only person who has lived in the unit. It is in perfect condition and I hope the new owner will love and enjoy it as much as I have. You may contact me at: emailer44@pm.me</p></div><div class="pair">
 
-<div class="container">
-  <div class="image-placeholder">Image Placeholder</div>
-  <div class="text-placeholder">
-    <h2>Property Description</h2>
-    <p>Placeholder text for condo details. You can include highlights, features, and selling points here.</p>
-  </div>
+
+<div class="text-placeholder scrollable" id="neighborhood" style="padding-top: 0px;">
+<h2>
+      Entry
+     </h2>
+<p>
+      Welcoming and well-maintained entrance with great first impressions.
+     </p>
+</div><div class="image-placeholder">
+<img alt="Entry" src="Entry2.jpg"/>
+</div></div><div class="pair">
+
+
+<div class="text-placeholder" style="padding-top: 0px;">
+<h2>
+      Restroom
+     </h2>
+<p>
+      Spotless bathroom featuring contemporary fixtures and clean design.
+     </p>
+</div><div class="image-placeholder">
+<div class="carousel" data-images='["Restroom3.jpg", "Restroom2.jpg"]'>
+<div class="carousel-counter">
+       Image 1
+      </div>
+<img alt="Restroom" src="Restroom3.jpg"/>
+<div class="carousel-controls">
+<button class="prev">
+        ←
+       </button>
+<button class="next">
+        →
+       </button>
 </div>
+</div>
+</div></div><div class="pair">
 
+
+<div class="text-placeholder" style="padding-top: 0px;">
+<h2>
+      Laundry
+     </h2>
+<p>
+      Convenient in-unit laundry setup tucked neatly out of the way.
+     </p>
+</div><div class="image-placeholder">
+<img alt="Laundry" src="Laundry2.jpg"/>
+</div></div><div class="pair">
+
+
+<div class="text-placeholder" style="padding-top: 0px;">
+<h2>
+      Dining Area
+     </h2>
+<p>
+      A beautiful view of this area.
+     </p>
+</div><div class="image-placeholder">
+<div class="carousel" data-images='["DiningArea3.jpg", "DiningArea2.jpg"]'>
+<div class="carousel-counter">
+       Image 1
+      </div>
+<img alt="Dining Area" src="DiningArea3.jpg"/>
+<div class="carousel-controls">
+<button class="prev">
+        ←
+       </button>
+<button class="next">
+        →
+       </button>
+</div>
+</div>
+</div></div><div class="pair">
+
+
+<div class="text-placeholder" style="padding-top: 0px;">
+<h2>
+      Kitchen
+     </h2>
+<p>
+      Modern kitchen with stylish cabinetry, clean finishes, and space-saving layout. Full sized proper oven, stove top, stainless steel refrigerator and ample cabinets and storage.
+     </p>
+</div><div class="image-placeholder">
+<div class="carousel" data-images='["Kitchen3.jpg", "Kitchen2.jpg"]'>
+<div class="carousel-counter">
+       Image 1
+      </div>
+<img alt="Kitchen" src="Kitchen3.jpg"/>
+<div class="carousel-controls">
+<button class="prev">
+        ←
+       </button>
+<button class="next">
+        →
+       </button>
+</div>
+</div>
+</div></div><div class="pair">
+
+
+<div class="text-placeholder" style="padding-top: 0px;">
+<h2>
+      Living Area
+     </h2>
+<p>
+      A beautiful view of this area.
+     </p>
+</div><div class="image-placeholder">
+<img alt="Living Area" src="LivingArea2.jpg"/>
+</div></div><div class="pair">
+
+
+<div class="text-placeholder" style="padding-top: 0px;">
+<h2>
+      Bedroom
+     </h2>
+<p>
+      Cozy and quiet bedroom with large window and soft natural light.
+     </p>
+</div><div class="image-placeholder">
+<div class="carousel" data-images='["Bedroom2.jpg", "Bedroom3.jpg", "Bedroom4.jpg", "Bedroom5.jpg"]'>
+<div class="carousel-counter">
+       Image 1
+      </div>
+<img alt="Bedroom" src="Bedroom2.jpg"/>
+<div class="carousel-controls">
+<button class="prev">
+        ←
+       </button>
+<button class="next">
+        →
+       </button>
+</div>
+</div>
+</div></div><div class="pair">
+
+
+<div class="text-placeholder" style="padding-top: 0px;">
+<h2>
+      Outside View
+     </h2>
+<p>
+      A beautiful view of this area.
+     </p>
+</div><div class="image-placeholder">
+<div class="carousel" data-images='["OutsideView2.jpg", "OutsideView3.jpg", "OutsideView4.jpg"]'>
+<div class="carousel-counter">
+       Image 1
+      </div>
+<img alt="Outside View" src="OutsideView2.jpg"/>
+<div class="carousel-controls">
+<button class="prev">
+        ←
+       </button>
+<button class="next">
+        →
+       </button>
+</div>
+</div>
+</div></div><div class="pair">
+
+
+<div class="text-placeholder" style="padding-top: 0px;">
+<h2>
+      Neighborhood
+     </h2>
+<div id="neighborhood-scroll">
+<p>
+       This location has been a absolute dream for me. Groceries (Maxi) are a pleasant five minute walk, emphasis on pleasant. The only road crossing needed is Newman blvd and there is a crosswalk right where it's needed.  Walk a additional five minutes and you are at Walmart. I have never once needed a car to complete my grocery shopping, it's all so easy by foot.
+      </p>
+<p>
+       Most mornings I start my day by walking to a cafe. There are several within Mall Angrinon, the surrounding neighborhoods, and Monk blvd.  They are all 5 - 15 minutes walk which I do every morning.
+      </p>
+<p>
+       Within the condo grounds is a park with a fun water feature which shoots up water from the ground at varying locations. You will often see giggly children playing here.
+      </p>
+<p>
+       Other benefits I have enjoyed is the bixi bike station and parc Angrinon, both within 5 - 10 minutes walking.
+      </p>
+<p>
+       The demographics and general vibe of this area is well to do. I have had many pleasant chats with my neighbors and often they are engineers, business owners,   other varying successful types who are family oriented.
+      </p>
+</div>
+</div><div class="image-placeholder">
+<iframe allowfullscreen="" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2799.0031881294926!2d-73.60902842357436!3d45.44959187107371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc911a825548acf%3A0x6256452e6e89afd8!2s1700%20Rue%20Viola%20Desmond%2C%20Montr%C3%A9al%2C%20QC%20H8N%200H1!5e0!3m2!1sen!2sca!4v1754164285253!5m2!1sen!2sca" style="border:0;" width="100%">
+</iframe>
+</div></div><div class="full-width-text">
+<h2>Contact</h2>
+<p>If you are serious and interested in this property please contact Emma at this email: emailer44@pm.me</p></div></div>
+<script>
+   document.addEventListener("DOMContentLoaded", function () {
+  const carousels = document.querySelectorAll('.carousel');
+
+  carousels.forEach((carousel) => {
+    const images = JSON.parse(carousel.getAttribute('data-images'));
+    let index = 0;
+    const img = carousel.querySelector('img');
+    const counter = carousel.querySelector('.carousel-counter');
+    const prevBtn = carousel.querySelector('.prev');
+    const nextBtn = carousel.querySelector('.next');
+
+    const updateImage = () => {
+      img.src = images[index];
+      counter.textContent = "Image " + (index + 1);
+    };
+
+    prevBtn.addEventListener('click', () => {
+      index = (index - 1 + images.length) % images.length;
+      updateImage();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      index = (index + 1) % images.length;
+      updateImage();
+    });
+  });
+});
+  </script>
 </body>
 </html>
